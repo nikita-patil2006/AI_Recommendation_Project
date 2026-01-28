@@ -90,3 +90,42 @@ Ensure the prepared user–item matrix is available in the output/ folder.
 Run the model training and evaluation script:
 
 python scripts/model_training.py
+
+
+---
+
+## 📊 Milestone 3 – Evaluation and Refinement
+
+### 🎯 Objectives
+
+- Evaluate the recommendation model performance  
+- Analyze results using standard metrics (Precision, Recall, F1-score)  
+- Refine the model and test recommendation scenarios  
+
+### ✅ Tasks Completed
+
+- Implemented a model evaluation script (`model_evaluation.py`)  
+- Used a train-test split approach by hiding a portion of user ratings and predicting them  
+- Computed evaluation metrics:
+  - Precision  
+  - Recall  
+  - F1-score  
+- Tested Top-K recommendation scenario (Top-5 recommendations)  
+- Refined recommendation logic and similarity computation to improve accuracy  
+
+### 📈 Evaluation Results (Top-5 Recommendations)
+
+- **Average Precision:** 0.3947  
+- **Average Recall:** 0.2060  
+- **Average F1-score:** 0.2292  
+
+These results are realistic and acceptable for collaborative filtering on sparse datasets. The evaluation confirms that the recommendation model generates meaningful personalized recommendations.
+
+### ▶️ How to Run
+
+Ensure the user–item interaction matrix is available in the `output/` folder.  
+Run the evaluation script:
+
+```bash
+python scripts/model_evaluation.py
+
