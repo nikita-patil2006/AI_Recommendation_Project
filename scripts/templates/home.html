@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Recommender</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+        }
+        button {
+            background: #22c55e;
+            border: none;
+            cursor: pointer;
+        }
+        .error {
+            color: #f87171;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🎬 Movie Recommendation System</h1>
+<p>Select a user to get personalized recommendations</p>
+
+<form action="/recommend" method="post">
+    <select name="user_id">
+        <option value="">Select User</option>
+        {% for u in users %}
+        <option value="{{ u }}">User {{ u }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+    <button type="submit">Get Recommendations</button>
+</form>
+
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+
+</body>
+</html>
