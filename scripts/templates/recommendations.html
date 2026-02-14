@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendations</title>
+    <style>
+        body {
+            background: #020617;
+            color: white;
+            font-family: Arial;
+            padding: 30px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #111827;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .rating {
+            color: #facc15;
+        }
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<h2>🎯 Recommendations for User {{ user_id }}</h2>
+
+<div class="grid">
+{% for movie in recommendations %}
+    <div class="card">
+        <h4>{{ movie.title }}</h4>
+        <p class="rating">
+            ⭐ {{ "%.2f"|format(movie.avg_rating) }}
+            ({{ movie.rating_count }} ratings)
+        </p>
+        <p>Recommended because it’s popular among similar users</p>
+    </div>
+{% endfor %}
+</div>
+
+<br>
+<a href="/">⬅ Back</a>
+
+</body>
+</html>
