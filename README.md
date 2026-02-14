@@ -129,3 +129,52 @@ Run the evaluation script:
 ```bash
 python scripts/model_evaluation.py
 
+
+Movie Recommendation System – Milestone 4
+📌 Overview
+
+This project is a Movie Recommendation System built using User-Based Collaborative Filtering with cosine similarity.
+
+Milestone 4 focuses on converting the recommendation model into a complete user-facing application with authentication, navigation, and explainable recommendations.
+
+🚀 Features Added in Milestone 4
+
+🔐 Login & Logout (Email + Password)
+
+📊 Dashboard with user insights
+
+🎬 Personalized movie recommendations
+
+🧠 Reason shown for each recommendation
+
+❄️ Cold-start handling using popularity-based fallback
+
+🧭 Navigation bar (Dashboard, Recommendations, About)
+
+🧠 Algorithm Used
+
+User-Based Collaborative Filtering
+
+Cosine Similarity for user similarity calculation
+
+Popularity-based fallback for new users
+
+⚙️ Tech Stack
+
+Python
+
+Streamlit
+
+Pandas
+
+NumPy
+
+Scikit-learn
+
+▶️ Run the Project
+pip install -r requirements.txt
+streamlit run app.py
+🎯 Objective
+
+To demonstrate how a collaborative filtering model can be integrated into a real-world, user-facing application with explainability and session management.
+
